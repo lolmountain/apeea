@@ -1,0 +1,31 @@
+<!--
+  Generated template for the NotificationsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title> Notifications</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <ion-card *ngFor="let product of products">
+    <ion-card-content>
+      <ion-card-title>
+        {{product.name | uppercase}}
+      </ion-card-title>
+      <p>
+        {{product.quantity}}
+      </p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+

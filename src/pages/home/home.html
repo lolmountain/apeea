@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Parents d'élèves d'Ambilly</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-grid>
+    <ion-row justify-content-center="center" align-items-center="center">
+      <ion-col align-self-center="center">
+        <img width="320" height="311" src="assets/imgs/logo_APEEA.png">
+      </ion-col>
+    </ion-row>
+    <ion-row justify-content-center="center">
+      <ion-col><button ion-button secondary menuToggle>Inscription</button></ion-col>
+      <ion-col><button ion-button
+      (click)="this.navCtrl.push('ConnexionPage')">Connexion</button></ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>
