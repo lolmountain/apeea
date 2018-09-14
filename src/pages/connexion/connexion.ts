@@ -26,7 +26,7 @@ export class ConnexionPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad ConnexionPage');
 
-   // console.log(this.loginProvider.login());
+    //console.log(this.loginProvider.login());
   }
 
 }

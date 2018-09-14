@@ -15,7 +15,7 @@ export class LoginProvider {
 
 
 
-  constructor(public http: HttpClient, public googleapis : google) {
+  constructor(public http: HttpClient) {
     console.log('Hello LoginProvider Provider');
   }
 
@@ -47,13 +47,13 @@ export class LoginProvider {
         console.log("Provided service account does not have permission to generate access tokens");
       } else {
         var accessToken = tokens.access_token;
-        return accessToken;
+
 
         // See the "Using the access token" section below for information
         // on how to use the access token to send authenticated requests to
         // the Realtime Database REST API.
       }
-
+      return accessToken;
     });
 
 }

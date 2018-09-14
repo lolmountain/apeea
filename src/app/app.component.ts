@@ -7,7 +7,7 @@ import { HomePage } from '../pages/home/home';
 import { QuiSommesNousPage } from '../pages/qui-sommes-nous/qui-sommes-nous';
 import { AgendaPage } from '../pages/agenda/agenda';
 import { ConnexionPage } from '../pages/connexion/connexion';
-import { NotificationsPage } from '../pages/notifications/notifications';
+//import { NotificationsPage } from '../pages/notifications/notifications';
 import * as firebase from 'firebase';
 //import { ListPage } from '../pages/list/list';
 
@@ -41,8 +41,8 @@ export class MyApp {
       //{ title: 'List', icon: 'list', component: ListPage },
       { title: 'Qui sommes nous?', icon: 'information-circle', component: QuiSommesNousPage },
       { title: 'Agenda', icon: 'calendar', component: AgendaPage },
-      { title: 'Connexion', icon: 'log-in', component: ConnexionPage },
-      { title: 'Notifications', icon: 'notifications', component: NotificationsPage }
+      { title: 'Connexion', icon: 'log-in', component: ConnexionPage }
+      //,      { title: 'Notifications', icon: 'notifications', component: NotificationsPage }
 
     ];
 

@@ -25,36 +25,6 @@ export class NotificationsPage {
   }
 //, public restProvider: RestProvider
 
-onCreateProduct(product) {
-  this.restProvider
-    .createProduct(product)
-    .subscribe(
-      (newProduct) => {
-        this.products = this.products.concat(newProduct);
-      }
-    );
-}
-
-onUpdateProduct(product) {
-  this.restProvider
-    .updateProduct(product)
-    .subscribe(
-      (updatedProduct) => {
-        /* You can assign back the updated product to the model holding               the form's product*/
-      }
-    );
-}
-
-onRemoveProduct(product) {
-  this.restProvider
-    .deleteProductById(product.id)
-    .subscribe(
-      () => {
-        this.products = this.products.filter((e) => e.id !== product.id);
-      }
-    );
-}
-
   ionViewDidLoad() {
     console.log('ionViewDidLoad NotificationsPage');
    // this.restProvider.getProducts().subscribe((products : Product[])=>{
