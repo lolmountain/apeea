@@ -1,7 +1,7 @@
 import { TestBed, getTestBed } from '@angular/core/testing';
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
 
-import { RestProvider } from './rest';
+import { RestProvider } from './rest-old';
 
 describe('RestProvider', () => {
   let injector: TestBed;
