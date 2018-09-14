@@ -14,6 +14,7 @@ import {Product} from "../../models/Product.model";
 @Injectable()
 export class RestProvider {
   baseUrl:string = "http://localhost:3000";
+  err: any[];
 
   constructor(private httpClient : HttpClient) { }
 
@@ -26,7 +27,7 @@ export class RestProvider {
         return products;
 
       })
-      .catch((err)=>{
+      .catch((err) => {
         console.error(err);
       });
   }
@@ -37,7 +38,7 @@ export class RestProvider {
       .map(response => {
         return new Product(response);
       })
-      .catch((err)=>{
+      .catch((err) => {
         console.error(err);
       });
   }
@@ -49,8 +50,8 @@ export class RestProvider {
       .map(response => {
         return new Product(response);
       })
-      .catch((error)=>{
-        console.error(error);
+      .catch((err)=>{
+        console.error(err);
       });
   }
 
@@ -61,7 +62,7 @@ export class RestProvider {
       .map(response => {
         return new Product(response);
       })
-      .catch((err)=>{
+      .catch((err) => {
         console.error(err);
       });
   }
@@ -70,8 +71,8 @@ export class RestProvider {
   public deleteProductById(productId: number) {
     return this.httpClient
       .delete(this.baseUrl+ '/products/' + productId)
-      .catch((e)=>{
-        console.error(e);
+      .catch((err) => {
+        console.error(err);
       });
   }
 

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { RestProvider } from './../../providers/rest/rest';
+//import { RestProvider } from './../../providers/rest/rest';
 import {Product} from "../../models/Product.model";
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/delay';
@@ -21,9 +21,9 @@ import 'rxjs/add/operator/catch';
 export class NotificationsPage {
   private products : Product[] = [];
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public restProvider: RestProvider ) {
+  constructor(public navCtrl: NavController, public navParams: NavParams ) {
   }
-
+//, public restProvider: RestProvider
 
 onCreateProduct(product) {
   this.restProvider
@@ -57,9 +57,9 @@ onRemoveProduct(product) {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad NotificationsPage');
-    this.restProvider.getProducts().subscribe((products : Product[])=>{
-      this.products = products;
-    });
+   // this.restProvider.getProducts().subscribe((products : Product[])=>{
+    //  this.products = products;
+   // });
   }
 
 }

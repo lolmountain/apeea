@@ -13,7 +13,9 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { ProcessHttpmsgProvider } from '../providers/process-httpmsg/process-httpmsg';
 import { HttpClientModule } from '@angular/common/http';
-import { RestProvider } from '../providers/rest/rest';
+import { AuthProvider } from '../providers/auth/auth';
+import { LoginProvider } from '../providers/login/login';
+//import { RestProvider } from '../providers/rest/rest';
 
 
 @NgModule({
@@ -47,8 +49,13 @@ import { RestProvider } from '../providers/rest/rest';
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     ProcessHttpmsgProvider,
     { provide: 'BaseURL', useValue: baseURL },
-    RestProvider
+    AuthProvider,
+    LoginProvider
+    //RestProvider
 
   ]
 })
-export class AppModule {}
+export class AppModule {
+
+
+}

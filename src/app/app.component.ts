@@ -8,12 +8,24 @@ import { QuiSommesNousPage } from '../pages/qui-sommes-nous/qui-sommes-nous';
 import { AgendaPage } from '../pages/agenda/agenda';
 import { ConnexionPage } from '../pages/connexion/connexion';
 import { NotificationsPage } from '../pages/notifications/notifications';
+import * as firebase from 'firebase';
 //import { ListPage } from '../pages/list/list';
+
+const config = {
+  apiKey: 'AIzaSyBnQHc58Pv0lRmjUwZURnVHlcQHbs8MDHE',
+  authDomain: 'bookshelves-74100.firebaseapp.com',
+  databaseURL: 'https://bookshelves-74100.firebaseio.com',
+  projectId: 'bookshelves-74100',
+  storageBucket: 'gs://bookshelves-74100.appspot.com',
+  messagingSenderId: '777772429503'
+};
 
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
+
+
   @ViewChild(Nav) nav: Nav;
 
   rootPage: any = HomePage;
@@ -43,6 +55,7 @@ export class MyApp {
       this.statusBar.styleDefault();
       this.splashScreen.hide();
     });
+    firebase.initializeApp(config);
   }
 
   openPage(page) {
